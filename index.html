@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>Opendoor CRM</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Opendoor CRM">
+  <meta name="theme-color" content="#0E7FB0"/>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <img src="assets/logo-black.png" alt="Opendoor" class="logo">
+    <h1>Opendoor CRM</h1>
+    <button class="btn ghost right" id="addDealTop">+ Сделка</button>
+  </header>
+
+  <nav class="tabs">
+    <button data-screen="pipeline" class="active">Воронка</button>
+    <button data-screen="deal">Сделка</button>
+    <button data-screen="clients">Клиенты</button>
+    <button data-screen="docs">Документы</button>
+    <button data-screen="warehouse">Склады</button>
+    <button data-screen="tasks">Задачи</button>
+    <button data-screen="reports">Отчёты</button>
+    <button data-screen="settings">Настройки</button>
+  </nav>
+
+  <main id="screen"></main>
+
+  <button class="fab" id="fab">＋</button>
+
+  <!-- Add Deal Sheet -->
+  <div class="sheet-backdrop" id="sheetBackdrop"></div>
+  <div class="sheet" id="addSheet" aria-hidden="true">
+    <div class="sheet-handle"></div>
+    <h3>Новая сделка</h3>
+    <label>Имя клиента</label>
+    <input class="input" id="fName" placeholder="ФИО">
+    <label>Телефон</label>
+    <input class="input" id="fPhone" placeholder="+7 ...">
+    <label>Источник</label>
+    <select id="fSource" class="input">
+      <option>Instagram</option>
+      <option>2ГИС</option>
+      <option>Реклама</option>
+      <option>Рекомендация</option>
+      <option>Магазин</option>
+      <option>WhatsApp</option>
+    </select>
+    <label>Сумма (₸)</label>
+    <input class="input" id="fAmount" type="number" placeholder="0">
+    <div class="row" style="margin-top:10px;gap:10px">
+      <button class="btn ghost" id="cancelAdd">Отмена</button>
+      <button class="btn primary" id="saveAdd">Сохранить</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
