@@ -3,8 +3,8 @@
   "short_name": "Opendoor",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#0b0f14",
-  "theme_color": "#0E7FB0",
+  "background_color": "#0B1220",
+  "theme_color": "#0EA5E9",
   "icons": [
     {
       "src": "assets/icon-192.png",
@@ -15,12 +15,6 @@
       "src": "assets/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
-    },
-    {
-      "src": "assets/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "any"
     }
   ]
 }
